@@ -1,0 +1,30 @@
+{
+    // Use python within the virtual environment
+    "python.pythonPath": "${workspaceFolder}/virtenv/py27dev/Scripts/python",
+    // Directory where the virtual environments are stored
+    "python.venvPath": "${workspaceFolder}/virtenv",
+    // Additional autocompletion search directories
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/virtenv/py27dev/Lib/site-packages/scons-3.0.1",
+        "${workspaceFolder}/"
+    ],
+
+    // Use pytest for testing
+    "python.unitTest.pyTestEnabled": false,
+    // Since we'e enabled coverage in the default settings for pytest
+    // disable it here for debugging tests
+    "python.unitTest.pyTestArgs": ["--no-cov"],
+
+    // Global enable linting
+    "python.linting.enabled": true,
+
+    // Ignore intermediary files
+    "files.exclude": {
+        "**/*.pyc": true,
+        "**/__pycache__": true,
+        "**/.sconsign.dblite": true,
+    },
+    "python.unitTest.promptToConfigure": false,
+    "python.unitTest.unittestEnabled": false,
+    "python.unitTest.nosetestsEnabled": false,
+}
